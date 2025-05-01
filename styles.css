@@ -1,0 +1,39 @@
+body {
+  padding: 25px;
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #e81d99, #e81dd2, #d41de8, #be1de8); 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  color: #333; 
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.moving-images {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: move 8s linear infinite;
+}
+
+.moving-images img {
+  height: 150px; 
+  margin-right: 20px; 
+  border: 2px solid black; 
+  border-radius: 15px;
+}
+
+@keyframes move {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
